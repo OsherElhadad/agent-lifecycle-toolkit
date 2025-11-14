@@ -63,16 +63,27 @@ The `altk` module is divided into lifecycle stages of an agent's exeuction. Each
 1. Determine which lifecycle stage your component belongs. Ask yourself what problem it solves and where it's likely to be most useful for an agent.
 1. Once you've selected a lifecycle stage, create a new package under the associated lifecycle package in the `altk` folder.
 1. Ensure the `pyproject.toml` is updated with new dependencies and that the `uv.lock` file is up to date.
+   * Be sure to mark minimum required versions and set them to be as permissive as possible (i.e. `coollibrary>=0.4.2`)
+   * Also add an optional dependency group for your component with its required dependencies.
 1. Each component should also have its own `README.md` to outline 3 main things:
    * When to use the component
-   * How to use the component
+   * A Quick Start example of how to use the component
+   * Instructions on configuration parameters and expected outputs
+1. Each component should also have a more detailed "Under the Hood" page in our documentation page under `docs/concepts/components`
+   * Architecture
    * Proof (benchmarks, tests, etc.) that the approach works better compared to some baseline performance on the task
 1. If your component makes use of LLMs, please use the LLM provider in `altk/core/llm`. You can refer to the [README.md](altk/core/llm/README.md) for more details.
 1. A component should have a class that extends the [ComponentBase](altk/core/toolkit.py#L48) class defined in `core` along with the following:
    * `supported_phases()` that returns `AgentPhase.RUNTIME` and/or `AgentPhase.BUILDTIME` depending on how the component is intended to be used.
    * `_run()` if your agent supports the `AgentPhase.RUNTIME` phase.
    * `_build()` if your agent supports the `AgentPhase.BUILDTIME` phase.
-1. The component should be accompanied by a set of tests demonstrating that it works. Tests should be placed alongside the `tests` folder.
+1. The component should be accompanied by a set of tests demonstrating that it works. Tests should be placed alongside the corresponding lifecycle pakage in the `tests` folder.
+1. Be sure to add your component in the following places in the documentation to make it easier for others to find:
+   * The main `README.md` component summary table
+   * The lifecycle package `README.md`
+   * The main documentation page `docs/index.md` features table
+   * The usage page in documentation `docs/usage`
+   * The component summary page in `docs/concepts/components/summary`
 
 ## Detecting Secrets
 
