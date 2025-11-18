@@ -2,6 +2,38 @@
 
 <!-- version list -->
 
+## v0.5.0 (2025-11-18)
+
+### Bug Fixes
+
+- Use custom StrEnum class for python3.10 support
+  ([#63](https://github.com/AgentToolkit/agent-lifecycle-toolkit/pull/63),
+  [`f10aa1b`](https://github.com/AgentToolkit/agent-lifecycle-toolkit/commit/f10aa1bde67087c8afc893923f3aa9fc8e07720d))
+
+### Documentation
+
+- Add ToolGuard to READMEs
+  ([`515e1bd`](https://github.com/AgentToolkit/agent-lifecycle-toolkit/commit/515e1bd37a8817885de6fc2a5e2c8c38b594a79f))
+
+- Update CONTRIBUTING.md
+  ([`d54cba4`](https://github.com/AgentToolkit/agent-lifecycle-toolkit/commit/d54cba4be83128c606d9996d551c6f6a35e28cd5))
+
+- Update README.md
+  ([`95fdaf9`](https://github.com/AgentToolkit/agent-lifecycle-toolkit/commit/95fdaf968bb6b65c39589fbc613ff533ff267f80))
+
+- Update README.md
+  ([`52bfb24`](https://github.com/AgentToolkit/agent-lifecycle-toolkit/commit/52bfb24d54913887f901f5d44b226b64dcd25998))
+
+### Features
+
+- Add post_request tool enhancement components
+  ([#57](https://github.com/AgentToolkit/agent-lifecycle-toolkit/pull/57),
+  [`ddcf7e4`](https://github.com/AgentToolkit/agent-lifecycle-toolkit/commit/ddcf7e4fcff373ed60d7ae56f8bccdd63219b0e2))
+
+- Add ToolGuard component ([#60](https://github.com/AgentToolkit/agent-lifecycle-toolkit/pull/60),
+  [`c8b6d4d`](https://github.com/AgentToolkit/agent-lifecycle-toolkit/commit/c8b6d4dc6dcf16963d67ffcfdeab64242dd95abe))
+
+
 ## v0.4.2 (2025-11-12)
 
 ### Documentation
